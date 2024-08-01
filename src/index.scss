@@ -1,0 +1,94 @@
+@font-face {
+  font-family: "dinNext";
+  src: url("dinNext.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "geMedium";
+  src: url("geMedium.oft") format("oft");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --f-geMedium: "geMedium", sans-serif;
+  --f-dinNext: "dinNext", sans-serif;
+
+  --c-primary: #2e735f;
+  --c-primary-bg: #c4edda;
+  --c-accent: #f2d785;
+  --c-black: #3e3e3e;
+  --c-gray: #707070;
+  --c-white: #fff;
+  --c-blue: #00b6bb;
+  --c-blue-link: #0a58ca;
+
+  --animation: all 0.3s;
+
+  --radius-8: 8rem;
+  --radius-6: 6rem;
+  --radius-4: 4rem;
+}
+/********************************************************/
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  width: 100%;
+  overflow-x: hidden;
+}
+body {
+  font-family: var(--f-dinNext);
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--c-black);
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  /* overflow-x: clip; */
+  /* scroll-padding-top: 12rem; */
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: inherit;
+}
+ul,
+ol {
+  list-style: none;
+}
+button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  color: inherit;
+}
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.3rem rgba(46, 115, 95, 0.5);
+}
+input:focus {
+  box-shadow: none;
+}
+.icon {
+  cursor: pointer;
+}
+/*************************************************************/
+/* General styles */
+
+@mixin font($size: 1.4rem, $line-height: 2.1rem, $weight: 400) {
+  font-size: $size;
+  line-height: $line-height;
+  font-weight: $weight;
+}
