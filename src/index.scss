@@ -5,14 +5,8 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "dinNext2";
-  src: url("../fonts/dinNext.ttf") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
   font-family: "geMedium";
-  src: url("../fonts/geMedium.oft") format("oft");
+  src: url("../fonts/GE_SS_Two_Medium.otf") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -20,7 +14,6 @@
 :root {
   --f-geMedium: "geMedium", sans-serif;
   --f-dinNext: "dinNext", sans-serif;
-  --f-dinNext2: "dinNext2", sans-serif;
 
   --c-primary: #2e735f;
   --c-primary-bg: #c4edda;

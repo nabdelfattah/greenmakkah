@@ -1,0 +1,46 @@
+.sectionApp {
+  background-image: url("../assets/images/road.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+  align-items: center;
+  justify-content: end;
+  height: 75rem;
+  width: 100%;
+  max-width: 114.719rem;
+  margin: 0 auto;
+}
+.imgWrapper {
+  align-self: start;
+}
+.img {
+  padding: 2.5rem 0;
+  height: 67.5rem;
+}
+.textWrapper {
+  padding: 2rem;
+  color: #fff;
+  p {
+    font-family: dinNext;
+    font-size: 2.4rem;
+    font-weight: 300;
+    text-align: right;
+    margin-bottom: 1.6rem;
+  }
+}
+.heading {
+  font-family: var(--f-geMedium);
+  font-size: 3.6rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+.headingLine {
+  background-color: var(--c-accent);
+  height: 0.4rem;
+  width: 8rem;
+  border: none;
+}
