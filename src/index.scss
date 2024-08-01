@@ -1,12 +1,18 @@
 @font-face {
   font-family: "dinNext";
-  src: url("dinNext.ttf") format("ttf");
+  src: url("../fonts/DINNextLTArabic-Regular-3.ttf") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "dinNext2";
+  src: url("../fonts/dinNext.ttf") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "geMedium";
-  src: url("geMedium.oft") format("oft");
+  src: url("../fonts/geMedium.oft") format("oft");
   font-weight: normal;
   font-style: normal;
 }
@@ -14,6 +20,7 @@
 :root {
   --f-geMedium: "geMedium", sans-serif;
   --f-dinNext: "dinNext", sans-serif;
+  --f-dinNext2: "dinNext2", sans-serif;
 
   --c-primary: #2e735f;
   --c-primary-bg: #c4edda;
@@ -52,6 +59,8 @@ body {
   font-size: 1.6rem;
   font-weight: 400;
   color: var(--c-black);
+  background-image: url(../src/assets/images/background.svg);
+  // background-color: var(--c-black);
   width: 100%;
   position: relative;
   overflow-x: hidden;
@@ -86,6 +95,12 @@ input:focus {
 }
 /*************************************************************/
 /* General styles */
+
+.container {
+  width: 100%;
+  max-width: 127rem;
+  margin: 0 auto;
+}
 
 @mixin font($size: 1.4rem, $line-height: 2.1rem, $weight: 400) {
   font-size: $size;

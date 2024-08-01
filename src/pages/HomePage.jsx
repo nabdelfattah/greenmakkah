@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Hero,
   NewsFeeds,
@@ -12,7 +11,7 @@ import {
 
 export default function HomePage() {
   return (
-    <>
+    <main>
       <Hero />
       <NewsLine />
       <Statistics />
@@ -21,6 +20,6 @@ export default function HomePage() {
       <NewsFeeds />
       <Events />
       <Partners />
-    </>
+    </main>
   );
 }

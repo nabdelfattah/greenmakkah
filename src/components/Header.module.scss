@@ -1,0 +1,67 @@
+@import "../index.scss";
+.header {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  padding: 0.8rem;
+  width: 100vw;
+  height: 10.5rem;
+}
+.login {
+  padding: 0.5rem 0;
+  width: fit-content;
+  margin-inline-start: auto;
+  padding-inline-end: 3.2rem;
+  transition: var(--animation);
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-end;
+  span {
+    @include font(1.7rem);
+    letter-spacing: 1px;
+  }
+}
+
+.login * {
+  color: var(--c-white);
+}
+.login__icon {
+}
+.login__text {
+}
+.navigation {
+  display: flex;
+  align-items: center;
+  padding: 0 1.2rem;
+  margin-top: auto;
+  & > a {
+    margin-inline-end: 1.6rem;
+  }
+}
+.logo {
+  color: var(--c-white);
+  width: 20rem;
+  padding-bottom: 0.5rem;
+}
+.navList {
+  display: flex;
+  color: var(--c-white);
+  margin-inline-start: 0.2rem;
+}
+.navLink {
+  padding: 0.4rem;
+  @include font(2rem, 3.2rem, 300);
+  font-family: var(--f-dinNext);
+  letter-spacing: 0.3px;
+}
+.navIcon {
+  padding: 0 0.8rem;
+}
+.whiten {
+  .logo {
+    color: var(--c-primary);
+  }
+}
+
+@media (max-width: 48em) {
+}

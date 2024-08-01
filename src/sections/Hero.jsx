@@ -1,5 +1,6 @@
 import React from "react";
+import styles from "./Hero.module.scss";
 
 export default function Hero() {
-  return <div></div>;
+  return <section className={styles.sectionHero}></section>;
 }

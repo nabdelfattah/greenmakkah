@@ -1,0 +1,75 @@
+import partner1 from './assets/images/partners/Civil-Defense.png'
+import partner2 from './assets/images/partners/Emirate-of-Mecca-gadda.png'
+import partner3 from './assets/images/partners/Emirate-of-Mecca-taif.png'
+import partner4 from './assets/images/partners/General-Authority-of-Meteorology-and-Environmental-Protection.png'
+import partner5 from './assets/images/partners/general-entertainment-authority.png'
+import partner6 from './assets/images/partners/Guests-of-God-service-program.png'
+import partner7 from './assets/images/partners/king-abdelaziz-university.png'
+import partner8 from './assets/images/partners/king-abdelaziz-international-airport.png'
+import partner9 from './assets/images/partners/makkah chamber.png'
+import partner10 from './assets/images/partners/ministry of environment water and agriculture.png'
+import partner11 from './assets/images/partners/Ministry of Islamic Affairs.png'
+import partner12 from './assets/images/partners/Ministry of National Guard.png'
+import partner13 from './assets/images/partners/Ministry of Rural and Municipal Affairs and Housing.png'
+import partner14 from './assets/images/partners/ministry-of-education.png'
+import partner15 from './assets/images/partners/ministry-of-health.png'
+import partner16 from './assets/images/partners/ministry-of-sport.png'
+import partner17 from './assets/images/partners/ministry-of-tourism.png'
+import partner18 from './assets/images/partners/National Center for Vegetation Development.png'
+import partner19 from './assets/images/partners/National Center for Wildlife Development.png'
+import partner20 from './assets/images/partners/national-water-company.png'
+import partner21 from './assets/images/partners/Neighborhood Centers Association.png'
+import partner22 from './assets/images/partners/riyadh-chamber.png'
+import partner23 from './assets/images/partners/royal commission for makkah city and holy sites.png'
+import partner24 from './assets/images/partners/saudi electricity company.png'
+import partner25 from './assets/images/partners/saudi geological survey.png'
+import partner26 from './assets/images/partners/saudi Irrigation organization.png'
+import partner27 from './assets/images/partners/saudi-aramco.png'
+import partner28 from './assets/images/partners/saudi-archery-federation.png'
+import partner29 from './assets/images/partners/Special forces for environmental security.png'
+import partner30 from './assets/images/partners/state-properties-general-authority.png'
+import partner31 from './assets/images/partners/stc.png'
+import partner32 from './assets/images/partners/swcc.png'
+import partner33 from './assets/images/partners/taif chamber of commerce & industry.png'
+import partner34 from './assets/images/partners/Tourism Development Fund.png'
+import partner35 from './assets/images/partners/tu.png'
+import partner36 from './assets/images/partners/um-alqura-university.png'
+
+export const partners = [
+  {img: partner1, name: 'logo of Civil Defense'},
+  {img: partner2, name: 'logo of Emirate of Mecca-gadda'},
+  {img: partner3, name: 'logo of Emirate of Mecca-taif'},
+  {img: partner4, name: 'logo of the General Authority of Meteorology and Environmental Protection'},
+  {img: partner5, name: 'logo of general-entertainment-authority'},
+  {img: partner6, name: 'logo of Guests of God service program'},
+  {img: partner7, name: 'logo of king abdelaziz university'},
+  {img: partner8, name: 'logo of king-abdelaziz-international-airport'},
+  {img: partner9, name: 'logo of makkah chamber'},
+  {img: partner10, name: 'logo of ministry of environment water and agriculture'},
+  {img: partner11, name: 'logo of Ministry of Islamic Affairs'},
+  {img: partner12, name: 'logo of Ministry of National Guard'},
+  {img: partner13, name: 'logo of Ministry of Rural and Municipal Affairs and Housing'},
+  {img: partner14, name: 'logo of ministry-of-education'},
+  {img: partner15, name: 'logo of ministry-of-health'},
+  {img: partner16, name: 'logo of ministry-of-sport'},
+  {img: partner17, name: 'logo of ministry-of-tourism'},
+  {img: partner18, name: 'logo of National Center for Vegetation Development'},
+  {img: partner19, name: 'logo of National Center for Wildlife Development'},
+  {img: partner20, name: 'logo of national-water-company'},
+  {img: partner21, name: 'logo of Neighborhood Centers Association'},
+  {img: partner22, name: 'logo of riyadh-chamber'},
+  {img: partner23, name: 'logo of royal commission for makkah city and holy sites'},
+  {img: partner24, name: 'logo of saudi electricity company'},
+  {img: partner25, name: 'logo of saudi geological survey'},
+  {img: partner26, name: 'logo of saudi Irrigation organization'},
+  {img: partner27, name: 'logo of saudi-aramco'},
+  {img: partner28, name: 'logo of saudi-archery-federation'},
+  {img: partner29, name: 'logo of Special forces for environmental security'},
+  {img: partner30, name: 'logo of state-properties-general-authority'},
+  {img: partner31, name: 'logo of stc'},
+  {img: partner32, name: 'logo of swcc'},
+  {img: partner33, name: 'logo of taif chamber of commerce & industry'},
+  {img: partner34, name: 'logo of Tourism Development Fund'},
+  {img: partner35, name: 'logo of tu'},
+  {img: partner36, name: 'logo of um-alqura-university'},
+]

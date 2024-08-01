@@ -1,0 +1,48 @@
+.sectionPartners {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.heading {
+  color: var(--c-black);
+  font-family: var(--f-dinNext);
+  font-size: 3.6rem;
+  line-height: 1.6;
+  font-style: normal;
+  font-weight: 700;
+  padding-top: 1.5rem;
+  text-align: center;
+}
+.headingLine {
+  color: var(--c-accent);
+  background: var(--c-accent);
+  width: 8rem;
+  height: 0.4rem;
+  margin: 0 auto 1.5rem;
+  border: none;
+}
+.partnersWrapper {
+  position: relative;
+}
+.arrows {
+  position: absolute;
+  left: 5px;
+  right: 5px;
+  top: 35%;
+  display: flex;
+  justify-content: space-between;
+  button {
+    transition: var(--animation);
+    &:hover {
+      transform: scale(1.5);
+    }
+  }
+  img {
+    height: 2rem;
+  }
+}
+.partners {
+  display: flex;
+  justify-content: center;
+  gap: 9.5rem;
+  background: linear-gradient(180deg, #f9f9f900, #f9f9f9);
+  padding-bottom: 4rem;
+}
