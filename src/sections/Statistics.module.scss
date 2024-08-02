@@ -1,0 +1,17 @@
+.sectionStatistics {
+  padding: 4rem 0;
+  background: linear-gradient(180deg, #2e735f4d, #2e735f00);
+}
+.statList {
+  display: flex;
+  padding: 1.2rem;
+  justify-content: center;
+  li {
+    padding: 4rem;
+    height: 54.934rem;
+  }
+  li:nth-child(even) {
+    display: flex;
+    align-items: flex-end;
+  }
+}

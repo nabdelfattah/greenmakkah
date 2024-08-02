@@ -1,0 +1,47 @@
+.stat {
+  position: relative;
+  width: 24.4rem;
+  height: 36.9rem;
+  margin: 1rem;
+  text-align: center;
+  overflow: hidden;
+  // observer
+  transform: translateX(50rem);
+  opacity: 0;
+  transition: all 1s;
+}
+.show {
+  opacity: 1;
+  transform: translateX(0rem);
+}
+.statImg {
+  transition: var(--animation);
+  display: block;
+  height: 100%;
+}
+.stat:hover {
+  .statImg {
+    transform: scale(1.4);
+  }
+}
+.caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.statRecord {
+  color: var(--c-white);
+  font-family: var(--f-geMedium);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.2px;
+  padding-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+.statType {
+  color: var(--c-white);
+  font-family: var(--f-dinNext);
+  font-size: 1.6rem;
+}

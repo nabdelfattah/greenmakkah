@@ -35,6 +35,26 @@ import partner34 from './assets/images/partners/Tourism Development Fund.png'
 import partner35 from './assets/images/partners/tu.png'
 import partner36 from './assets/images/partners/um-alqura-university.png'
 
+import statImg1 from './assets/images/statistics/stat-img1.png'
+import statImg2 from './assets/images/statistics/stat-img2.png'
+import statImg3 from './assets/images/statistics/stat-img3.png'
+import statImg4 from './assets/images/statistics/stat-img4.png'
+import statIcon1 from './assets/images/statistics/stat-icon1.svg'
+import statIcon2 from './assets/images/statistics/stat-icon2.svg'
+import statIcon3 from './assets/images/statistics/stat-icon3.svg'
+import statIcon4 from './assets/images/statistics/stat-icon4.svg'
+
+import hero1png from './assets/images/hero/planting.png'
+import hero1webp from './assets/images/hero/planting.webp'
+import hero2png from './assets/images/hero/trees.png'
+import hero2webp from './assets/images/hero/trees.webp'
+import hero3png from './assets/images/hero/worker-plants.png'
+import hero3webp from './assets/images/hero/worker-plants.webp'
+import hero4png from './assets/images/hero/worker-desert.png'
+import hero4webp from './assets/images/hero/worker-desert.webp'
+import hero5png from './assets/images/hero/worker.png'
+import hero5webp from './assets/images/hero/worker.webp'
+
 export const partners = [
   {img: partner1, name: 'logo of Civil Defense'},
   {img: partner2, name: 'logo of Emirate of Mecca-gadda'},
@@ -72,4 +92,19 @@ export const partners = [
   {img: partner34, name: 'logo of Tourism Development Fund'},
   {img: partner35, name: 'logo of tu'},
   {img: partner36, name: 'logo of um-alqura-university'},
+]
+
+export const statistics = [
+  {img: statImg1, alt:  "Green lanscape", icon: statIcon1, record: "5871.32 كم2", type: "المساحات الخضراء"},
+  {img: statImg2, alt:  "Desert area", icon: statIcon2, record: "132615.26 كم2", type: "المناطق الصحراوية"},
+  {img: statImg3, alt:  "Waterbodies", icon: statIcon3, record: "174.85 كم2", type: "المسطحات المائية"},
+  {img: statImg4, alt:  "Wetland", icon: statIcon4, record: "7.02 كم2", type: "الأراضي الرطبة"}
+]
+
+export const heroImgs = [
+  {img:  hero1png, imgWebp:  hero1webp,alt: "some one planting"},
+  {img:  hero2png, imgWebp: hero2webp ,alt: "image of trees"},
+  {img:  hero3png, imgWebp:  hero3webp,alt: "a worker plants some planting"},
+  {img:  hero4png, imgWebp:  hero4webp,alt: "a worker standing on desert"},
+  {img:  hero5png, imgWebp:  hero5webp,alt: "a worker"},
 ]

@@ -53,6 +53,7 @@ body {
   font-weight: 400;
   color: var(--c-black);
   background-image: url(../src/assets/images/background.svg);
+  background: linear-gradient(180deg, #f9f9f900, #f9f9f9);
   // background-color: var(--c-black);
   width: 100%;
   position: relative;
@@ -86,6 +87,26 @@ input:focus {
 .icon {
   cursor: pointer;
 }
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px var(--c-gray);
+  border-radius: 7px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(46, 115, 95, 0.671);
+  border-radius: 7px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--c-primary-bg);
+}
 /*************************************************************/
 /* General styles */
 
@@ -100,3 +121,15 @@ input:focus {
   line-height: $line-height;
   font-weight: $weight;
 }
+
+// 1115px  (header, map)
+@media (max-width: 69.7rem) {
+}
+// 768  (stat, mob, events)
+@media (max-width: 48rem) {
+}
+// 576px  (partners, footer)
+@media (max-width: 36rem) {
+}
+
+//
