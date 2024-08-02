@@ -51,7 +51,6 @@ export default function Partners() {
         <ul className={styles.partners}>
           {partners.map((obj, index) => {
             let desiredIndex = [(index + partnerIndex) % partners.length];
-            console.log(desiredIndex);
             return (
               <li
                 key={partners[desiredIndex].name}
