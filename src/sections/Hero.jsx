@@ -13,10 +13,10 @@ export default function Hero() {
           modules={[Autoplay]}
           slidesPerView={1}
           loop
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
+          // autoplay={{
+          //   delay: 2500,
+          //   disableOnInteraction: false,
+          // }}
         >
           {heroImgs.map((obj) => {
             return (
