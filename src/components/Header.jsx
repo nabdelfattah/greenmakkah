@@ -1,16 +1,143 @@
-import { useState } from "react";
-import styles from "./Header.module.scss";
+import { useEffect, useReducer, useRef } from "react";
 import { Link, NavLink } from "react-router-dom";
+import styles from "./Header.module.scss";
+import { AboutSubNav, MediaSubNav, GuideSubNav } from "./";
 import greenLogo from "../assets/icons/mrda-green.png";
 import whiteLogo from "../assets/icons/mrda.png";
 
+const ACTIONS = {
+  ABOUT: "about",
+  MEDIA: "media",
+  GUIDE: "guide",
+  SCROLLED: "scrolled",
+  RESET: "reset",
+};
+const INITIAL_STATE = {
+  shouldWhiten: false,
+  scrolled: false,
+  openAbout: false,
+  openMedia: false,
+  openGuide: false,
+};
+function reducer(state, action) {
+  switch (action) {
+    case ACTIONS.ABOUT:
+      return {
+        ...state,
+        shouldWhiten: true,
+        openAbout: true,
+        openMedia: false,
+        openGuide: false,
+      };
+    case ACTIONS.MEDIA:
+      return {
+        ...state,
+        shouldWhiten: true,
+        openAbout: false,
+        openMedia: true,
+        openGuide: false,
+      };
+    case ACTIONS.GUIDE:
+      return {
+        ...state,
+        shouldWhiten: true,
+        openAbout: false,
+        openMedia: false,
+        openGuide: true,
+      };
+    case ACTIONS.SCROLLED:
+      return { ...state, shouldWhiten: true, scrolled: true };
+    case ACTIONS.RESET:
+      if (state.scrolled) {
+        return {
+          ...state,
+          openAbout: false,
+          openMedia: false,
+          openGuide: false,
+        };
+      } else {
+        return INITIAL_STATE;
+      }
+    default:
+      return state;
+  }
+}
+
 export default function Header() {
-  const [shouldToggle, setShouldToggle] = useState(false);
-  const about = <></>;
-  const media = <></>;
-  const guid = <></>;
+  const [state, dispatch] = useReducer(reducer, INITIAL_STATE);
+
+  const leftArrow = (
+    <svg
+      aria-hidden="true"
+      focusable="false"
+      data-prefix="fas"
+      data-icon="angle-left"
+      className={styles.icon}
+      role="img"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 256 512"
+    >
+      <path
+        fill="currentColor"
+        d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"
+      ></path>
+    </svg>
+  );
+
+  const bottomArrow = (
+    <svg
+      className={styles.navIcon}
+      aria-hidden="true"
+      focusable="false"
+      data-prefix="fas"
+      data-icon="chevron-down"
+      role="img"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 448 512"
+      style={{ height: "15px" }}
+    >
+      <path
+        fill="currentColor"
+        d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+      ></path>
+    </svg>
+  );
+
+  // close subNavigations when click outside header
+  const headerRef = useRef();
+  function clickOutsideHeaderHandler(e) {
+    if (headerRef.current && !headerRef.current.contains(e.target))
+      dispatch(ACTIONS.RESET);
+  }
+  useEffect(() => {
+    document.addEventListener("click", clickOutsideHeaderHandler);
+    return () => {
+      // Unbind the event listener on clean up
+      document.removeEventListener("click", clickOutsideHeaderHandler);
+    };
+  }, []);
+
+  function clickAboutHandler() {
+    if (state.openAbout) return dispatch(ACTIONS.RESET);
+    dispatch(ACTIONS.ABOUT);
+  }
+  function clickMediaHandler() {
+    if (state.openMedia) return dispatch(ACTIONS.RESET);
+    dispatch(ACTIONS.MEDIA);
+  }
+  function clickGuideHandler() {
+    if (state.openGuide) return dispatch(ACTIONS.RESET);
+    dispatch(ACTIONS.GUIDE);
+  }
+
   return (
-    <header className={`${styles.header} ${shouldToggle && styles.whiten}`}>
+    <header
+      ref={headerRef}
+      className={`${styles.header} ${state.shouldWhiten && styles.whiten}
+    ${
+      (state.openAbout || state.openMedia || state.openGuide) && styles.height
+    }`}
+    >
       <a
         className={styles.login}
         href="https://gisportal.syadtech.com/greenmakkah/Login"
@@ -204,8 +331,12 @@ export default function Header() {
             />
           </svg>
         </Link>
-        <Link to="https://www.mrda.gov.sa/" aria-label="visit mdra.gov.sa">
-          <img src={shouldToggle ? greenLogo : whiteLogo} alt="mdra" />
+        <Link
+          to="https://www.mrda.gov.sa/"
+          aria-label="visit mdra.gov.sa"
+          className={styles.mrda}
+        >
+          <img src={state.shouldWhiten ? greenLogo : whiteLogo} alt="mdra" />
         </Link>
         <ul className={styles.navList}>
           <li>
@@ -214,66 +345,21 @@ export default function Header() {
             </NavLink>
           </li>
           <li>
-            <button className={styles.navLink}>
+            <button className={styles.navLink} onClick={clickAboutHandler}>
               <span>عن بوابة أخضر مكة</span>
-              <svg
-                className={styles.navIcon}
-                aria-hidden="true"
-                focusable="false"
-                data-prefix="fas"
-                data-icon="chevron-down"
-                role="img"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 448 512"
-                style={{ height: "15px" }}
-              >
-                <path
-                  fill="currentColor"
-                  d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
-                ></path>
-              </svg>
+              {bottomArrow}
             </button>
           </li>
           <li>
-            <button className={styles.navLink}>
+            <button className={styles.navLink} onClick={clickMediaHandler}>
               <span>المركز الإعلامي</span>
-              <svg
-                className={styles.navIcon}
-                aria-hidden="true"
-                focusable="false"
-                data-prefix="fas"
-                data-icon="chevron-down"
-                role="img"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 448 512"
-                style={{ height: "15px" }}
-              >
-                <path
-                  fill="currentColor"
-                  d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
-                ></path>
-              </svg>
+              {bottomArrow}
             </button>
           </li>
           <li>
-            <button className={styles.navLink}>
+            <button className={styles.navLink} onClick={clickGuideHandler}>
               <span>دليل النباتات</span>
-              <svg
-                className={styles.navIcon}
-                aria-hidden="true"
-                focusable="false"
-                data-prefix="fas"
-                data-icon="chevron-down"
-                role="img"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 448 512"
-                style={{ height: "15px" }}
-              >
-                <path
-                  fill="currentColor"
-                  d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
-                ></path>
-              </svg>
+              {bottomArrow}
             </button>
           </li>
           <li>
@@ -281,6 +367,9 @@ export default function Header() {
           </li>
         </ul>
       </nav>
+      {state.openAbout ? <AboutSubNav leftArrow={leftArrow} /> : ""}
+      {state.openMedia ? <MediaSubNav leftArrow={leftArrow} /> : ""}
+      {state.openGuide ? <GuideSubNav leftArrow={leftArrow} /> : ""}
     </header>
   );
 }

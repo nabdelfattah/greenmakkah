@@ -1,7 +1,6 @@
 import styles from "./Statistics.module.scss";
 import { statistics } from "../data";
-import {} from "../useElementOnScreen";
-import StatItem from "../components/StatItem";
+import { StatItem } from "../components";
 
 export default function Statistics() {
   return (

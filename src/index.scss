@@ -16,6 +16,7 @@
   --f-dinNext: "dinNext", sans-serif;
 
   --c-primary: #2e735f;
+  --c-primary-hover: #588f7f;
   --c-primary-bg: #c4edda;
   --c-accent: #f2d785;
   --c-black: #3e3e3e;
@@ -115,11 +116,46 @@ input:focus {
   max-width: 127rem;
   margin: 0 auto;
 }
-
-@mixin font($size: 1.4rem, $line-height: 2.1rem, $weight: 400) {
-  font-size: $size;
-  line-height: $line-height;
-  font-weight: $weight;
+.greenArrowsWrapper {
+  position: absolute;
+  z-index: 3;
+  left: 5px;
+  right: 5px;
+  top: 35%;
+  display: flex;
+  justify-content: space-between;
+}
+.greenArrow {
+  height: 2rem;
+  color: var(--c-primary);
+  transition: var(--animation);
+}
+.greenArrow:hover {
+  transform: scale(1.2);
+}
+.swiper-button-disabled {
+  user-select: none;
+  &:hover {
+    transform: scale(0);
+  }
+}
+.prevBtn {
+  position: absolute;
+  top: 40%;
+  z-index: 3;
+}
+.nextBtn {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  z-index: 3;
+}
+.nextBtn:disabled,
+.prevBtn:disabled {
+  user-select: none;
+  svg {
+    color: var(--c-primary-bg);
+  }
 }
 
 // 1115px  (header, map)

@@ -1,12 +1,12 @@
-@import "../index.scss";
 .header {
   display: flex;
   flex-direction: column;
   position: fixed;
   padding: 0.8rem;
-  width: 100vw;
+  width: 100%;
   height: 10.5rem;
   z-index: 999;
+  transition: var(--animation);
 }
 .login {
   padding: 0.5rem 0;
@@ -17,18 +17,14 @@
   display: flex;
   gap: 0.8rem;
   align-items: flex-end;
+  z-index: 2;
   span {
     font-size: 1.7rem;
     letter-spacing: 1px;
   }
 }
-
 .login * {
   color: var(--c-white);
-}
-.login__icon {
-}
-.login__text {
 }
 .navigation {
   display: flex;
@@ -37,6 +33,9 @@
   margin-top: auto;
   & > a {
     margin-inline-end: 1.6rem;
+  }
+  img {
+    width: 23.4rem;
   }
 }
 .logo {
@@ -51,18 +50,126 @@
 }
 .navLink {
   padding: 0.4rem;
-  @include font(2rem, 3.2rem, 300);
+  font-size: 2rem;
+  line-height: 3.2rem;
+  font-weight: 300;
   font-family: var(--f-dinNext);
   letter-spacing: 0.3px;
+}
+.navLink:focus span,
+.navLink:focus svg * {
+  color: var(--c-primary);
 }
 .navIcon {
   padding: 0 0.8rem;
 }
+//////////////////////////
+/// sub navigations
+.subNav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  margin-top: 2rem;
+  position: relative;
+}
+.subNavImg {
+  max-width: 20rem;
+}
+.subNavList {
+  display: flex;
+  flex-direction: column;
+  padding: 1.6rem;
+  li {
+    transition: var(--animation);
+  }
+}
+.subNavLink {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 2.2rem;
+  color: var(--c-gray);
+  width: 34.9rem;
+  padding: 0.5rem 1.2rem 1.5rem;
+  border-radius: 11px;
+  transition: var(--animation);
+  .title {
+    font-family: var(--f-dinNext);
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  .description {
+    width: 100%;
+    max-width: 27rem;
+    color: #bebdbd;
+    font-family: var(--f-dinNext);
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+  }
+}
+.subNavLink:hover {
+  p {
+    color: var(--c-white);
+  }
+  background-color: #2e735fcc;
+}
+.icon {
+  height: 1.7rem;
+  margin: 0 0.8rem;
+}
+.mediaSubNavList {
+  flex-direction: row;
+}
+.guideSubNav {
+  .subNavLink {
+    width: fit-content;
+    transition: var(--animation);
+    transform: translateX(-2.5rem);
+    &:hover {
+      transform: translateX(-3.2rem);
+    }
+  }
+  .description {
+    max-width: 14rem;
+  }
+}
+//////////////////////////
+/// modifiers
 .whiten {
+  background-color: var(--c-white);
+  box-shadow: 0 1px 4px 0 #00000052, 0 0 2px 0 #0003;
+  .navList *,
+  .login * {
+    color: var(--c-gray);
+  }
   .logo {
     color: var(--c-primary);
   }
 }
-
+.height {
+  // width: 100vw;
+  height: auto !important;
+  border-radius: 0 0 1rem 1rem;
+  overflow: hidden;
+}
+////////////////////////
+/// responsive
+@media (max-width: 81.25rem) {
+  // 1300px
+  .navLink {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 69.7rem) {
+  //1115px
+  .mrda {
+    display: none;
+  }
+}
+// 992
+@media (max-width: 62rem) {
+}
 @media (max-width: 48em) {
 }

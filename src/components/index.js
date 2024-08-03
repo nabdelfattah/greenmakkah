@@ -1,2 +1,8 @@
 export { default as Header } from './Header'
 export { default as Footer } from './Footer'
+export { default as StatItem } from './StatItem'
+export { default as NextNavBtn } from './NextNavBtn'
+export { default as PreviousNavBtn } from './PreviousNavBtn'
+export { default as AboutSubNav } from './AboutSubNav'
+export { default as MediaSubNav } from './MediaSubNav'
+export { default as GuideSubNav } from './GuideSubNav'
