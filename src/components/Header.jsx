@@ -160,8 +160,6 @@ export default function Header() {
   }
   // Burger menu handler
   const [mobNav, setMobNav] = useState(false);
-  console.log({ mobNav });
-  console.log(state);
   function menuHandler() {
     setMobNav((prevState) => !prevState);
   }

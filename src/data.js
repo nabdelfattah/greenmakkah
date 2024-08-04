@@ -108,3 +108,11 @@ export const heroImgs = [
   {img:  hero4png, imgWebp:  hero4webp,alt: "a worker standing on desert"},
   {img:  hero5png, imgWebp:  hero5webp,alt: "a worker"},
 ]
+
+export const newsTxt = [
+  {link: "https://gisportal.syadtech.com/greenmakkah/news/1", txt: 'الفيصل يستعرض مبادرة "أخضر مكة" وآليات التوسع في المسطحات الخضراء بالمنطقة'},
+  {link: "https://gisportal.syadtech.com/greenmakkah/news/1", txt: 'مبادرة أخضر مكه نقله نوعية نحو تحقيق برنامج المملكة الخضراء'},
+  {link: "https://gisportal.syadtech.com/greenmakkah/news/1", txt: 'تُشارك #هيئة_تطوير_منطقة_مكة بجناح تعريفي لمبادرة #أخضر_مكة'},
+  {link: "https://gisportal.syadtech.com/greenmakkah/news/1", txt: 'الرئيس التنفيذي لـ #هيئة_تطوير_منطقة_مكة م.أحمد العارضي متحدثًا عنمبادرة #أخضر_مكة'},
+  {link: "https://gisportal.syadtech.com/greenmakkah/news/1", txt: 'يمكنك الأن اكتشاف معالم مكه المكة المكرمه عن طريق المستكشف'}
+]
