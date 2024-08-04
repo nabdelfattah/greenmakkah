@@ -22,13 +22,20 @@
     font-size: 1.7rem;
     letter-spacing: 1px;
   }
+  &:hover {
+    * {
+      color: var(--c-primary) !important;
+    }
+  }
 }
 .login * {
+  transition: var(--animation);
   color: var(--c-white);
 }
-.navigation {
+.navigationWrapper {
   display: flex;
   align-items: center;
+  gap: 2rem;
   padding: 0 1.2rem;
   margin-top: auto;
   & > a {
@@ -37,6 +44,8 @@
   img {
     width: 23.4rem;
   }
+}
+.navigation {
 }
 .logo {
   color: var(--c-white);
@@ -50,12 +59,19 @@
 }
 .navLink {
   padding: 0.4rem;
+  padding-bottom: 0;
+  margin-bottom: 0.4rem;
   font-size: 2rem;
   line-height: 3.2rem;
   font-weight: 300;
   font-family: var(--f-dinNext);
   letter-spacing: 0.3px;
+  border-bottom: 2px solid transparent;
+  transition: var(--animation);
 }
+
+.navLink:hover span,
+.navLink:hover svg *,
 .navLink:focus span,
 .navLink:focus svg * {
   color: var(--c-primary);
@@ -63,76 +79,26 @@
 .navIcon {
   padding: 0 0.8rem;
 }
-//////////////////////////
-/// sub navigations
-.subNav {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  padding: 2rem;
-  margin-top: 2rem;
-  position: relative;
+.navLinkActive {
+  font-weight: 700;
+  border-bottom: 2px solid var(--c-primary);
+  color: var(--c-primary) !important;
 }
-.subNavImg {
-  max-width: 20rem;
-}
-.subNavList {
-  display: flex;
-  flex-direction: column;
-  padding: 1.6rem;
-  li {
-    transition: var(--animation);
-  }
-}
-.subNavLink {
-  font-size: 1.4rem;
-  font-weight: 400;
-  line-height: 2.2rem;
-  color: var(--c-gray);
-  width: 34.9rem;
-  padding: 0.5rem 1.2rem 1.5rem;
-  border-radius: 11px;
+.menuBtn {
+  display: none;
+  background-color: initial;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 0.25rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: 0.25rem 0.75rem;
   transition: var(--animation);
-  .title {
-    font-family: var(--f-dinNext);
-    font-size: 1.7rem;
-    font-weight: 500;
-    margin-bottom: 0.5rem;
+  img {
+    height: 3rem;
+    width: 3rem;
   }
-  .description {
-    width: 100%;
-    max-width: 27rem;
-    color: #bebdbd;
-    font-family: var(--f-dinNext);
-    font-size: 1.4rem;
-    font-weight: 300;
-    margin-bottom: 1rem;
-  }
-}
-.subNavLink:hover {
-  p {
-    color: var(--c-white);
-  }
-  background-color: #2e735fcc;
-}
-.icon {
-  height: 1.7rem;
-  margin: 0 0.8rem;
-}
-.mediaSubNavList {
-  flex-direction: row;
-}
-.guideSubNav {
-  .subNavLink {
-    width: fit-content;
-    transition: var(--animation);
-    transform: translateX(-2.5rem);
-    &:hover {
-      transform: translateX(-3.2rem);
-    }
-  }
-  .description {
-    max-width: 14rem;
+  &:hover {
+    background-color: var(--c-primary-bg);
   }
 }
 //////////////////////////
@@ -170,6 +136,72 @@
 }
 // 992
 @media (max-width: 62rem) {
+  .header {
+    flex-direction: row;
+    height: 8rem;
+    align-items: center;
+    background-color: var(--c-white);
+    box-shadow: 0 1px 4px 0 #00000052, 0 0 2px 0 #0003;
+  }
+  .login {
+    order: 2;
+  }
+  .navList *,
+  .login * {
+    color: var(--c-gray);
+  }
+  .logo {
+    color: var(--c-primary);
+  }
+  .menuBtn {
+    display: block;
+    z-index: 999;
+  }
+  .navigation {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: none;
+    transform: translate(2px, 100%);
+  }
+  .navLink {
+    transform: translateY(-3rem);
+    opacity: 0;
+    transition: var(--animation);
+  }
+  .navigation--show {
+    display: block;
+  }
+  .navigationItems--show {
+    .navLink {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  .navList {
+    flex-direction: column;
+    gap: 2.4rem;
+    background-color: var(--c-white);
+    height: 100vh;
+    width: 90vw;
+    padding: 0.8rem 2rem 0 0;
+    border-top: 1px solid rgba(112, 112, 112, 0.8);
+    * {
+      font-size: 2rem;
+      color: var(--c-primary) !important;
+    }
+    &:focus * {
+      text-shadow: -0.5px 0 currentColor, -0.5px 0 currentColor;
+    }
+  }
 }
 @media (max-width: 48em) {
+  .login {
+    display: none;
+  }
+  .logoWrapper {
+    position: absolute;
+    left: 16px;
+    top: 19%;
+  }
 }

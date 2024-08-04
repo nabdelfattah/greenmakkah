@@ -1,20 +1,21 @@
-import React, { useState } from "react";
 import { useSwiper } from "swiper/react";
 
-export default function NextNavBtn() {
+export default function NextNavBtn({ btnState, btnManager }) {
   const swiper = useSwiper();
   return (
     <button
+      disabled={!btnState.next}
       className="nextBtn"
       aria-label="next button"
       type="button"
       onClick={() => {
         swiper.slideNext();
+        btnManager("next", swiper.activeIndex);
       }}
     >
       <svg
         className="greenArrow"
-        // aria-hidden="true"
+        aria-hidden="true"
         focusable="false"
         data-prefix="fas"
         data-icon="arrow-left"

@@ -1,15 +1,16 @@
-import React, { useState } from "react";
 import { useSwiper } from "swiper/react";
 
-export default function PreviousNavBtn() {
+export default function PreviousNavBtn({ btnState, btnManager }) {
   const swiper = useSwiper();
   return (
     <button
+      disabled={!btnState.prev}
       className="prevBtn"
       aria-label="previous button"
       type="button"
       onClick={() => {
         swiper.slidePrev();
+        btnManager("prev", swiper.activeIndex);
       }}
     >
       <svg

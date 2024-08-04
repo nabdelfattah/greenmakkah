@@ -7,7 +7,7 @@ import { Autoplay } from "swiper/modules";
 
 export default function Hero() {
   return (
-    <section className={styles.sectionHero}>
+    <section className={`${styles.sectionHero} sectionHero`}>
       <div className={styles.bgWrapper}>
         <Swiper
           modules={[Autoplay]}

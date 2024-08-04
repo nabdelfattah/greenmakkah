@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 
 
-export function useElementOnScreen(options){
+export function useElementOnScreen(options, state){
   const [isVisible, setIsVisible] = useState(false)
   const observedElRef = useRef(null)
 
@@ -14,10 +14,12 @@ export function useElementOnScreen(options){
     // create observer obj
     const observer = new IntersectionObserver(callback, options)
     // observe target element
-    if (observedElRef.current) observer.observe(observedElRef.current)
+    if (observedElRef.current) {
+      observer.observe(observedElRef.current)
+    }
     // cleanup
     return ()=>{if(observedElRef.current) observer.unobserve(observedElRef.current)}
-  }, [observedElRef, options])
+  }, [observedElRef, options, state])
 
   return [isVisible, observedElRef]
 }

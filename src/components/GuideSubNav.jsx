@@ -3,8 +3,25 @@ import { PreviousNavBtn, NextNavBtn } from "./";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
+import { useState } from "react";
 
 export default function GuideSubNav({ leftArrow }) {
+  const [btnState, setBtnState] = useState({ prev: false, next: true });
+
+  function btnManager(type, currentIndex) {
+    if (type == "next") {
+      if (currentIndex < 4) {
+        return setBtnState({ prev: true, next: true });
+      }
+      return setBtnState({ prev: true, next: false });
+    } else {
+      if (currentIndex > 0) {
+        return setBtnState({ prev: true, next: true });
+      } else {
+        return setBtnState({ prev: false, next: true });
+      }
+    }
+  }
   return (
     <nav className={`${styles.subNav} ${styles.guideSubNav}`}>
       <Swiper
@@ -16,7 +33,7 @@ export default function GuideSubNav({ leftArrow }) {
         spaceBetween={0}
         slidesPerView={"3"}
       >
-        <PreviousNavBtn />
+        <PreviousNavBtn btnState={btnState} btnManager={btnManager} />
         <SwiperSlide>
           <a
             className={styles.subNavLink}
@@ -101,7 +118,7 @@ export default function GuideSubNav({ leftArrow }) {
             <p className={styles.seeMore}>الأكثر انتشارا</p>
           </a>
         </SwiperSlide>
-        <NextNavBtn />
+        <NextNavBtn btnState={btnState} btnManager={btnManager} />
       </Swiper>
     </nav>
   );
