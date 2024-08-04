@@ -164,9 +164,9 @@
     overflow: hidden;
   }
   .navLink {
-    transform: translateY(-3rem);
+    transform: translateY(-5rem);
     opacity: 0;
-    transition: var(--animation);
+    transition: all 1s;
   }
   .navigation--show {
     display: block;
@@ -204,5 +204,10 @@
     position: absolute;
     left: 16px;
     top: 19%;
+  }
+}
+@media (max-width: 36rem) {
+  .logo {
+    width: 15rem;
   }
 }

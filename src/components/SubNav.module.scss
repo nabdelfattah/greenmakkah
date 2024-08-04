@@ -11,6 +11,10 @@
   right: 0;
   background: white;
   width: 100%;
+  // observer
+  opacity: 0;
+  transform: translateY(-1rem);
+  transition: var(--animation);
 }
 .subNavImg {
   max-width: 20rem;
@@ -79,6 +83,11 @@
   .description {
     max-width: 14rem;
   }
+}
+//observer
+.showNav {
+  opacity: 1;
+  transform: translateY(0);
 }
 /////////////////////////////
 ///

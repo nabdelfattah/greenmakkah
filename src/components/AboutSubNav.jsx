@@ -1,9 +1,14 @@
 import styles from "./SubNav.module.scss";
 import greenLogo from "../assets/icons/mrda-green.png";
+import { useElementOnScreen } from "../useElementOnScreen";
 
 export default function AboutSubNav({ leftArrow }) {
+  const [isVisible, observedElRef] = useElementOnScreen({ threshold: 0 });
   return (
-    <nav className={styles.subNav}>
+    <nav
+      ref={observedElRef}
+      className={`${styles.subNav} ${isVisible && styles.showNav}`}
+    >
       <img
         className={styles.subNavImg}
         src={greenLogo}

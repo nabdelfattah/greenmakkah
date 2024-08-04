@@ -4,9 +4,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import { useState } from "react";
+import { useElementOnScreen } from "../useElementOnScreen";
 
 export default function GuideSubNav({ leftArrow }) {
   const [btnState, setBtnState] = useState({ prev: false, next: true });
+  const [isVisible, observedElRef] = useElementOnScreen({threshold: 0})
 
   function btnManager(type, currentIndex) {
     if (type == "next") {
@@ -23,7 +25,7 @@ export default function GuideSubNav({ leftArrow }) {
     }
   }
   return (
-    <nav className={`${styles.subNav} ${styles.guideSubNav}`}>
+    <nav ref={observedElRef} className={`${styles.subNav} ${styles.guideSubNav} ${isVisible && styles.showNav}`}>
       <Swiper
         navigation={{
           nextEl: ".nextBtn",
