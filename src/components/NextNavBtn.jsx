@@ -5,7 +5,7 @@ export default function NextNavBtn({ btnState, btnManager }) {
   return (
     <button
       disabled={!btnState.next}
-      className="nextBtn"
+      className="nextBtn swiper-button-next"
       aria-label="next button"
       type="button"
       onClick={() => {

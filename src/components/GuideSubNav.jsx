@@ -26,12 +26,16 @@ export default function GuideSubNav({ leftArrow }) {
     <nav className={`${styles.subNav} ${styles.guideSubNav}`}>
       <Swiper
         navigation={{
-          nextEl: "nextBtn",
-          prevEl: "prevBtn",
+          nextEl: ".nextBtn",
+          prevEl: ".prevBtn",
         }}
         modules={[Navigation]}
         spaceBetween={0}
-        slidesPerView={"3"}
+        slidesPerView={1}
+        breakpoints={{
+          992: { slidesPerView: 1, spaceBetween: 0 },
+          993: { slidesPerView: 3, spaceBetween: 0 },
+        }}
       >
         <PreviousNavBtn btnState={btnState} btnManager={btnManager} />
         <SwiperSlide>

@@ -410,19 +410,21 @@ export default function Header() {
                 <span>عن بوابة أخضر مكة</span>
                 {bottomArrow}
               </button>
-              {/* {state.openAbout ? <AboutSubNav leftArrow={leftArrow} /> : ""} */}
+              {state.openAbout ? <AboutSubNav leftArrow={leftArrow} /> : ""}
             </li>
             <li>
               <button className={styles.navLink} onClick={clickMediaHandler}>
                 <span>المركز الإعلامي</span>
                 {bottomArrow}
               </button>
+              {state.openMedia ? <MediaSubNav leftArrow={leftArrow} /> : ""}
             </li>
             <li>
               <button className={styles.navLink} onClick={clickGuideHandler}>
                 <span>دليل النباتات</span>
                 {bottomArrow}
               </button>
+              {state.openGuide ? <GuideSubNav leftArrow={leftArrow} /> : ""}
             </li>
             <li>
               <a
@@ -435,9 +437,9 @@ export default function Header() {
           </ul>
         </nav>
       </div>
-      {state.openAbout ? <AboutSubNav leftArrow={leftArrow} /> : ""}
+      {/* {state.openAbout ? <AboutSubNav leftArrow={leftArrow} /> : ""}
       {state.openMedia ? <MediaSubNav leftArrow={leftArrow} /> : ""}
-      {state.openGuide ? <GuideSubNav leftArrow={leftArrow} /> : ""}
+      {state.openGuide ? <GuideSubNav leftArrow={leftArrow} /> : ""} */}
     </header>
   );
 }

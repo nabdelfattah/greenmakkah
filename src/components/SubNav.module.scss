@@ -4,13 +4,13 @@
   gap: 2rem;
   padding: 2rem;
   margin-top: 2rem;
-  position: relative;
-  // mobile friendly style
-  // position: absolute;
-  // top: 8rem;
-  // right: 0;
-  // background: white;
-  // width: 100%;
+  border-radius: 0 0 1rem 1rem;
+  //
+  position: absolute;
+  top: 8rem;
+  right: 0;
+  background: white;
+  width: 100%;
 }
 .subNavImg {
   max-width: 20rem;
@@ -28,7 +28,8 @@
   font-weight: 400;
   line-height: 2.2rem;
   color: var(--c-gray);
-  width: 34.9rem;
+  width: 100%;
+  max-width: 34.9rem;
   padding: 0.5rem 1.2rem 1.5rem;
   border-radius: 11px;
   transition: var(--animation);
@@ -49,7 +50,7 @@
   }
 }
 .subNavLink:hover {
-  p {
+  * {
     color: var(--c-white);
   }
   background-color: #2e735fcc;
@@ -61,7 +62,12 @@
 .mediaSubNavList {
   flex-direction: row;
 }
+.mediaImgWrapper {
+  display: flex;
+  gap: 3rem;
+}
 .guideSubNav {
+  display: block;
   .subNavLink {
     width: fit-content;
     transition: var(--animation);
@@ -76,3 +82,31 @@
 }
 /////////////////////////////
 ///
+@media (max-width: 62rem) {
+  .subNav {
+    position: relative;
+    top: initial;
+    border: 1px solid #bebdbd;
+    border-radius: 11px;
+    max-width: 98%;
+    background: var(--c-white);
+    //
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .mediaSubNavList {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+  .mediaImgWrapper {
+    // width: 100%;
+    gap: 0;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 48em) {
+  .mediaImgWrapper {
+    flex-direction: column;
+  }
+}

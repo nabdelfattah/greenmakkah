@@ -5,7 +5,7 @@ export default function PreviousNavBtn({ btnState, btnManager }) {
   return (
     <button
       disabled={!btnState.prev}
-      className="prevBtn"
+      className="prevBtn swiper-button-prev"
       aria-label="previous button"
       type="button"
       onClick={() => {
