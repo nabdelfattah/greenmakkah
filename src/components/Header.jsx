@@ -160,6 +160,8 @@ export default function Header() {
   }
   // Burger menu handler
   const [mobNav, setMobNav] = useState(false);
+  console.log({ mobNav });
+  console.log(state);
   function menuHandler() {
     setMobNav((prevState) => !prevState);
   }
@@ -408,6 +410,7 @@ export default function Header() {
                 <span>عن بوابة أخضر مكة</span>
                 {bottomArrow}
               </button>
+              {/* {state.openAbout ? <AboutSubNav leftArrow={leftArrow} /> : ""} */}
             </li>
             <li>
               <button className={styles.navLink} onClick={clickMediaHandler}>
