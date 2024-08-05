@@ -4,8 +4,12 @@ import btn from "../assets/icons/video.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
+import { useElementOnScreen } from "../useElementOnScreen";
+import { useEffect } from "react";
 
 export default function Hero() {
+  const [isVisible, observedEl] = useElementOnScreen();
+
   return (
     <section className={`${styles.sectionHero} sectionHero`}>
       <div className={styles.bgWrapper}>
@@ -30,7 +34,10 @@ export default function Hero() {
           })}
         </Swiper>
       </div>
-      <div className={styles.txtWrapper}>
+      <div
+        ref={observedEl}
+        className={`${styles.txtWrapper} ${isVisible && styles.show}`}
+      >
         <p className={styles.welcom}>مرحبا بكم في</p>
         <h1 className={styles.heading}>بوابة اخضر مكة</h1>
         <p className={styles.txt}>ضمن مبادرة السعودية الخضراء</p>

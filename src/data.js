@@ -110,6 +110,7 @@ export const heroImgs = [
 ]
 
 export const newsTxt = [
+  {link: '#', txt: "مرحبا بك في أخضر مكة"},
   {link: "https://gisportal.syadtech.com/greenmakkah/news/1", txt: 'الفيصل يستعرض مبادرة "أخضر مكة" وآليات التوسع في المسطحات الخضراء بالمنطقة'},
   {link: "https://gisportal.syadtech.com/greenmakkah/news/1", txt: 'مبادرة أخضر مكه نقله نوعية نحو تحقيق برنامج المملكة الخضراء'},
   {link: "https://gisportal.syadtech.com/greenmakkah/news/1", txt: 'تُشارك #هيئة_تطوير_منطقة_مكة بجناح تعريفي لمبادرة #أخضر_مكة'},
