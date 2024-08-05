@@ -1,16 +1,29 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "./StatItem.module.scss";
 
 export default function StatItem({ dataObj, index }) {
-  const [isVisible, setIsVisible] = useState(false);
-
+  const [shouldShow, setShouldShow] = useState(false);
+  const elementRef = useRef();
   useEffect(() => {
-    setTimeout(() => {
-      setIsVisible(true);
-    }, 200 * index);
+    const element = elementRef.current;
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          setShouldShow(true);
+        }, 300 * index); // delay between each StatItem
+      }
+    });
+    observer.observe(element);
+    return () => {
+      observer.observe(element);
+    };
   }, []);
   return (
-    <figure className={`${styles.stat} ${isVisible && styles.show}`}>
+    <figure
+      className={`${styles.stat} ${shouldShow && styles.show}`}
+      ref={elementRef}
+    >
       <img className={styles.statImg} src={dataObj.img} alt={dataObj.alt} />
       <figcaption className={styles.caption}>
         <img

@@ -1,17 +1,41 @@
 .sectionStatistics {
-  padding: 4rem 0;
+  padding: 8rem 0 18rem; // 18rem = 8 + (10rem to compensate the even li transformation)
   background: linear-gradient(180deg, #2e735f4d, #2e735f00);
 }
+.statWrapper {
+  max-width: 124rem;
+  margin: 0 auto;
+}
 .statList {
-  display: flex;
-  padding: 1.2rem;
-  justify-content: center;
-  li {
-    padding: 4rem;
-    height: 54.934rem;
-  }
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
   li:nth-child(even) {
-    display: flex;
-    align-items: flex-end;
+    transform: translateY(10rem);
+  }
+}
+@media (max-width: 62rem) {
+  .sectionStatistics {
+    padding: 8rem 0;
+  }
+  .statList {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6rem;
+    // align-items;
+    justify-items: end;
+    li:nth-child(even) {
+      transform: translateY(0);
+      justify-self: start;
+    }
+  }
+}
+// 768  (stat, mob, events)
+@media (max-width: 48rem) {
+  .statList {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    li:nth-child(even) {
+      justify-self: center;
+    }
   }
 }

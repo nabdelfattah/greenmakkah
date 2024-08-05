@@ -53,9 +53,11 @@ body {
   font-size: 1.6rem;
   font-weight: 400;
   color: var(--c-black);
-  background-image: url(../src/assets/images/background.svg);
-  background: linear-gradient(180deg, #f9f9f900, #f9f9f9);
-  // background-color: var(--c-black);
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url(../src/assets/images/background.svg);
   width: 100%;
   position: relative;
   overflow-x: hidden;
@@ -164,9 +166,11 @@ input:focus {
 }
 // 992  (header, statistics, news, events, partners, footer)
 @media (max-width: 62rem) {
+  // 2 items
 }
 // 768  (stat, mob, events)
 @media (max-width: 48rem) {
+  // 1 item
 }
 // 576px  (partners, footer)
 @media (max-width: 36rem) {
