@@ -160,6 +160,10 @@ input:focus {
     color: var(--c-primary-bg);
   }
 }
+.show {
+  transform: translate(0, 0);
+  opacity: 1;
+}
 
 // 1115px  (header, map)
 @media (max-width: 69.7rem) {
