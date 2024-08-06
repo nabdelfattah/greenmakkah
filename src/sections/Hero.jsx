@@ -5,7 +5,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
 import { useElementOnScreen } from "../useElementOnScreen";
-import { useEffect } from "react";
 
 export default function Hero() {
   const [isVisible, observedEl] = useElementOnScreen();

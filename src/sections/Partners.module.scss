@@ -37,18 +37,38 @@
   }
 }
 .partners {
-  display: flex;
-  justify-content: center;
-  gap: 9.5rem;
+  // display: flex;
+  // justify-content: center;
+  // gap: 9.5rem;
   background: linear-gradient(180deg, #f9f9f900, #f9f9f9);
   padding-bottom: 4rem;
 }
-// .partner {
-//   transform: translateX(-100px);
-//   opacity: 0;
-//   transition: all 0.4s;
-// }
+.partner {
+  display: flex;
+  justify-content: center;
+  //   transform: translateX(-100px);
+  //   opacity: 0;
+  //   transition: all 0.4s;
+}
 .show {
   transform: translateX(0) !important;
   opacity: 1 !important;
+}
+.prevBtn,
+.nextBtn {
+  height: 2rem;
+  width: 2rem;
+  position: absolute;
+  top: 40%;
+  z-index: 3;
+  transition: var(--animation);
+  &:hover {
+    transform: scale(1.5);
+  }
+}
+.prevBtn {
+  right: 0.8rem;
+}
+.nextBtn {
+  left: 0.8rem;
 }
