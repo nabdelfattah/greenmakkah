@@ -37,18 +37,12 @@
   }
 }
 .partners {
-  // display: flex;
-  // justify-content: center;
-  // gap: 9.5rem;
   background: linear-gradient(180deg, #f9f9f900, #f9f9f9);
   padding-bottom: 4rem;
 }
 .partner {
   display: flex;
   justify-content: center;
-  //   transform: translateX(-100px);
-  //   opacity: 0;
-  //   transition: all 0.4s;
 }
 .show {
   transform: translateX(0) !important;

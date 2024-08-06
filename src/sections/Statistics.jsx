@@ -18,27 +18,7 @@ export default function Statistics() {
     setListItems(items);
   }, [statistics]);
 
-  // let list;
-  // useEffect(() => {
-  //   list = [];
-  //   statistics.forEach((item) => /* add li programatically to ul component */);
-  // }, []);
-
-  // console.log(list);
   const elementRef = useRef();
-  // useEffect(() => {
-  //   let targetEl = elementRef.current.lastChild;
-
-  //   const lastCardObserver = new IntersectionObserver((entries) => {
-  //     const lastCard = entries[0];
-  //     if (!lastCard.isIntersecting) return;
-  //     lastCardObserver.unObserve(lastCard.target);
-  //     lastCardObserver.observe(targetEl);
-  //   });
-  //   Array.from(elementRef.current.lastChild).forEach();
-  //   lastCardObserver.observe(elementRef.current.children[0]);
-  //   //  return ()=>{lastCardObserver.unobserve(elementRef.current.children)}
-  // }, []);
 
   return (
     <section className={styles.sectionStatistics}>
@@ -50,12 +30,3 @@ export default function Statistics() {
     </section>
   );
 }
-
-// <ul className={styles.statList} ref={elementRef}>
-//   {list &&
-//     list.map((obj, index) => (
-//       <li key={obj.type}>
-//         <StatItem dataObj={obj} index={index} />
-//       </li>
-//     ))}
-// </ul>

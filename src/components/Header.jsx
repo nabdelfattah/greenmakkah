@@ -435,9 +435,6 @@ export default function Header() {
           </ul>
         </nav>
       </div>
-      {/* {state.openAbout ? <AboutSubNav leftArrow={leftArrow} /> : ""}
-      {state.openMedia ? <MediaSubNav leftArrow={leftArrow} /> : ""}
-      {state.openGuide ? <GuideSubNav leftArrow={leftArrow} /> : ""} */}
     </header>
   );
 }

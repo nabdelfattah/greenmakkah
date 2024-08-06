@@ -2,50 +2,6 @@ import { useEffect, useRef } from "react";
 import styles from "./NewsLine.module.scss";
 import { newsTxt } from "../data";
 
-// export default function NewsLine() {
-//   const elementRef = useRef();
-//   useEffect(() => {
-//     const animatedElement = elementRef.current;
-//     const elementWidth = animatedElement.scrollWidth;
-
-//     const styleSheet = document.styleSheets[0];
-//     styleSheet.insertRule(
-//       `
-//       @keyframes move {
-//         0% {
-//           transform: translateX(-30%);
-//         }
-//         100% {
-//           transform: translateX(${elementWidth}px);
-//         }
-//       }
-//     `,
-//       styleSheet.cssRules.length
-//     );
-
-//     animatedElement.style.animation = "move 30s infinite linear";
-//     animatedElement.style.position = "relative"; // Ensure the element can be moved
-//   }, []);
-//   return (
-//     <section className={styles.sectionNewsLine}>
-//       <div className={styles.scroll} ref={elementRef}>
-//         <ul className={styles.newsList}>
-//           {newsTxt.map((item) => {
-//             return (
-//               <li key={item.txt} className={styles.newsItem}>
-//                 <a href={item.link} className={styles.newsLink}>
-//                   {item.txt}
-//                 </a>
-//               </li>
-//             );
-//           })}
-//         </ul>
-//       </div>
-//     </section>
-//   );
-// }
-
-// animatedElement.style.animationPlayState = "paused";
 export default function NewsLine() {
   const elementRef = useRef();
 

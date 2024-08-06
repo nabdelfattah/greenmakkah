@@ -187,7 +187,6 @@ export default function Footer() {
             <svg
               aria-label="Youtube"
               aria-hidden="true"
-              // focusable="false"
               data-prefix="fab"
               data-icon="youtube"
               className={styles.youtubeIcon}
