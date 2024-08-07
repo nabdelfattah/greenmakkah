@@ -62,8 +62,8 @@ body {
   position: relative;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  /* overflow-x: clip; */
-  /* scroll-padding-top: 12rem; */
+  overflow-x: clip;
+  scroll-padding-top: 12rem;
 }
 a {
   text-decoration: none;
@@ -172,10 +172,6 @@ input:focus {
   bottom: 2%;
   z-index: 9;
 }
-// 1115px  (header, map)
-@media (max-width: 69.7rem) {
-}
-// 992  (header, statistics, news, events, partners, footer)
 @media (max-width: 62rem) {
   .swiper-pagination.swiper-pagination-fraction.swiper-pagination-horizontal {
     padding-inline-start: 2.4rem;
@@ -184,12 +180,3 @@ input:focus {
     bottom: 0%;
   }
 }
-// 768  (stat, mob, events)
-@media (max-width: 48rem) {
-  // 1 item
-}
-// 576px  (partners, footer)
-@media (max-width: 36rem) {
-}
-
-//

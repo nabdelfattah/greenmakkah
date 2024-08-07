@@ -23,7 +23,6 @@ export function useElementOnScreen(options, state){
     // cleanup
     return ()=>{if(observedElRef.current) observer.unobserve(observedElRef.current)}
   }, [observedElRef, options, state])
-console.log(isVisible)
   return [isVisible, observedElRef]
 }
 
