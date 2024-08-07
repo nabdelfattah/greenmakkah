@@ -55,6 +55,32 @@ import hero4webp from './assets/images/hero/worker-desert.webp'
 import hero5png from './assets/images/hero/worker.png'
 import hero5webp from './assets/images/hero/worker.webp'
 
+import location1 from './assets/icons/map/map-montazah.svg'
+import location2 from './assets/icons/map/map-walk.svg'
+import location3 from './assets/icons/map/map-kornesh.svg'
+import location4 from './assets/icons/map/map-garden.svg'
+import location5 from './assets/icons/map/map-mazraa.svg'
+import location6 from './assets/icons/map/map-mahmia.svg'
+
+import news2png from './assets/images/news/news1.png' 
+import news1png from './assets/images/news/news2.png' 
+import news2webp from './assets/images/news/news1.webp' 
+import news1webp from './assets/images/news/news2.webp' 
+
+import event1jpg from './assets/images/events/event1.jpg' 
+import event2jpg from './assets/images/events/event2.jpg' 
+import event1webp from './assets/images/events/event1.webp' 
+import event2webp from './assets/images/events/event2.webp' 
+
+export const newsFeed = [
+  {title: ' الفيصل يستعرض مبادرة (أخضر مكة) وآليات التوسع في المسطحات الخضراء بالمنطقة', description: 'رأس صاحب السمو الملكي الأمير خالد الفيصل مستشار خادم الحرمين الشريفين أمير منطقة مكة المكرمة رئيس هيئة تطوير المنطقة في الإمارة بجدة، اجتماعاً لاستعراض أهداف مبادرة (اخضر مكة)، تم خلاله مناقشة آليات التوسع في المسطحات الخضراء بالمنطقة', url: 'https://gisportal.syadtech.com/greenmakkah/news/1', img: news1png, imgWebp: news1webp, alt: 'photo of Khalid bin Faisal Al Saud'},
+  {title: 'السعودية الخضراء .. حلم يتحقق', description: ' أعطى سمو ولي العهد الأمير محمد بن سلمان أولوية خاصة للجانب البيئي ومكافحة التصحر اهتمامًا كبيرًا، توجه سموه بإعلان «مبادرة السعودية الخضراء»، و»مبادرة الشرق الأوسط الأخضر» اللتين سيتم إطلاقهما قريبًا', url: 'https://gisportal.syadtech.com/greenmakkah/news/2', img: news2png, imgWebp: news2webp, alt: 'photo of king Mohammed bin salman'}
+]
+
+export const events = [
+  {title: 'ملتقى صناع العقار  بغرفة مكة', description: 'هيئة تطوير منطقة مكة المكرمة تشارك بجناح تعريفي في ملتقى صناع العقار بغرفة مكة', url: 'https://gisportal.syadtech.com/greenmakkah/events/1', img: event1jpg, imgWebp: event1webp, alt: 'A picture of a Saudi employee informing attendees of the initiative'},
+  {title: 'مؤتمر الأمن الغذائي المستدام  ', description: 'برعاية من #هيئة_تطوير_منطقة_مكة وبحضور الرئيس التنفيذي م. أحمد العارضي نظمت جامعة الملك عبدالله للعلوم والتقنية #كاوست ', url: 'https://gisportal.syadtech.com/greenmakkah/events/2', img: event2jpg, imgWebp: event2webp, alt: 'A picture of a Saudi employee talking to two Saudi women'}
+]
 export const partners = [
   {img: partner1, name: 'logo of Civil Defense'},
   {img: partner2, name: 'logo of Emirate of Mecca-gadda'},
@@ -116,4 +142,13 @@ export const newsTxt = [
   {link: "https://gisportal.syadtech.com/greenmakkah/news/1", txt: 'تُشارك #هيئة_تطوير_منطقة_مكة بجناح تعريفي لمبادرة #أخضر_مكة'},
   {link: "https://gisportal.syadtech.com/greenmakkah/news/1", txt: 'الرئيس التنفيذي لـ #هيئة_تطوير_منطقة_مكة م.أحمد العارضي متحدثًا عنمبادرة #أخضر_مكة'},
   {link: "https://gisportal.syadtech.com/greenmakkah/news/1", txt: 'يمكنك الأن اكتشاف معالم مكه المكة المكرمه عن طريق المستكشف'}
+]
+
+export const locations = [
+  {name: "منتزة",img:  location1, alt: 'icon of montazah'},
+  {name: "ممشى",img:  location2, alt: 'icon of a walking person'},
+  {name: "كورنيش",img:  location3, alt: 'icon of kornesh'},
+  {name: "حديقة",img:  location4, alt: 'icon of garden'},
+  {name: "مزرعة",img:  location5, alt: 'icon of mazraa'},
+  {name: "محمية طبيعية",img:  location6, alt: 'icon of mahmia'}
 ]

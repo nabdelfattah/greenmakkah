@@ -1,6 +1,6 @@
 import {
   Hero,
-  NewsFeeds,
+  NewsFeed,
   NewsLine,
   Statistics,
   Map,
@@ -17,7 +17,7 @@ export default function HomePage() {
       <Statistics />
       <Map />
       <MobileApp />
-      <NewsFeeds />
+      <NewsFeed />
       <Events />
       <Partners />
     </main>

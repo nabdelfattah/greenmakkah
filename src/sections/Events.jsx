@@ -1,5 +1,6 @@
-import React from "react";
+import styles from "./Events.module.scss";
+import { events } from "../data";
 
 export default function Events() {
-  return <div></div>;
+  return <section className={styles.sectionEvents}></section>;
 }

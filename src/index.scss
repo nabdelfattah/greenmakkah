@@ -161,16 +161,28 @@ input:focus {
   }
 }
 .show {
-  transform: translate(0, 0);
-  opacity: 1;
+  transform: translate(0, 0) !important;
+  opacity: 1 !important;
 }
-
+.swiper-pagination.swiper-pagination-fraction.swiper-pagination-horizontal {
+  text-align: center !important;
+  margin: 1rem 0;
+  position: absolute;
+  left: 50%;
+  bottom: 2%;
+  z-index: 9;
+}
 // 1115px  (header, map)
 @media (max-width: 69.7rem) {
 }
 // 992  (header, statistics, news, events, partners, footer)
 @media (max-width: 62rem) {
-  // 2 items
+  .swiper-pagination.swiper-pagination-fraction.swiper-pagination-horizontal {
+    padding-inline-start: 2.4rem;
+    text-align: start !important;
+    right: 0%;
+    bottom: 0%;
+  }
 }
 // 768  (stat, mob, events)
 @media (max-width: 48rem) {

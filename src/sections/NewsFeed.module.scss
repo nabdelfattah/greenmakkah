@@ -1,0 +1,140 @@
+.sectionNewsFeeds {
+  padding: 3rem 1.5rem;
+}
+.heading {
+  color: var(--c-black);
+  padding-bottom: 3.5rem;
+  margin-bottom: 0.8rem;
+  font-family: var(--f-geMedium);
+  font-size: 3.6rem;
+  font-weight: 700;
+  text-align: center;
+}
+.newsWrapper {
+  position: relative;
+}
+.imgWrapper {
+  opacity: 0;
+  transform: translate(50rem, 0);
+  transition: all 0.7s;
+}
+.news {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  // width: 100%;
+  max-width: 129.6rem;
+  height: 55.7rem;
+  margin: 0 3.2rem;
+  padding: 0 1.2rem 6rem;
+}
+.img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 var(--radius-6) 0 0;
+}
+.subHeading {
+  font-size: 1.4rem;
+  padding: 4rem 0 0.8rem;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  &::after {
+    content: "";
+    display: inline-block;
+    border-bottom: 3px solid var(--c-accent);
+    width: 80%;
+    width: 4rem;
+    padding-top: 0.8rem;
+  }
+}
+.title {
+  color: var(--c-blue);
+  padding: 1.5rem 0;
+  margin-bottom: 0.8rem;
+  font-family: var(--f-geMedium);
+  font-size: 2.8rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+.description {
+  font-size: 1.8rem;
+  font-weight: 300;
+  padding: 1.5rem 0;
+  color: var(--c-gray);
+}
+.detailsLink {
+  position: absolute;
+  bottom: 8rem;
+  color: var(--c-blue);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  transition: var(--animation);
+  &:hover {
+    color: var(--c-blue-link);
+  }
+}
+.seeMore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: var(--f-dinNext);
+  color: var(--c-gray);
+  padding-top: 1.2rem;
+  transition: var(--animation);
+  & * {
+    transition: var(--animation);
+  }
+  &:hover,
+  &:hover * {
+    color: var(--c-primary);
+  }
+}
+.icon {
+  height: 1.8rem;
+}
+.btnsWrapper {
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-end;
+  position: absolute;
+  left: 10%;
+  bottom: 2%;
+  z-index: 9;
+}
+
+@media (max-width: 62rem) {
+  .sectionNews {
+    max-width: 62.65rem;
+    padding: 2.4rem;
+  }
+  .news {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 0;
+    height: auto;
+    padding-bottom: 0;
+    margin: 0 auto;
+  }
+  .imgWrapper {
+    height: 45rem;
+    // justify-items: center;
+  }
+  .description {
+    padding-bottom: 11rem;
+  }
+  .detailsLink {
+    bottom: 5%;
+  }
+  .btnsWrapper {
+    bottom: 0;
+  }
+  .seeMore {
+    padding-top: 6rem;
+  }
+}
