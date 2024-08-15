@@ -15,7 +15,7 @@ export default function MobileApp() {
           ref={observedPicRef}
         >
           <source srcSet={phoneWebp} type="image/webp" />
-          <img src={phonePng} className={styles.img} />
+          <img src={phonePng} className={styles.img} alt="A smart phone" />
         </picture>
         <div
           className={`${styles.textWrapper} ${isTxtVisible && "show"}`}

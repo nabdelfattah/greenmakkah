@@ -72,7 +72,7 @@ export default function NewsFeed() {
           ))}
         </Swiper>
         <div className={styles.btnsWrapper}>
-          <button id="newsPrevBtn">
+          <button id="newsPrevBtn" aria-label="show previous news">
             <svg
               aria-hidden="true"
               focusable="false"
@@ -90,7 +90,7 @@ export default function NewsFeed() {
               ></path>
             </svg>
           </button>
-          <button id="newsNextBtn">
+          <button id="newsNextBtn" aria-label="show next news">
             <svg
               aria-hidden="true"
               focusable="false"
@@ -110,7 +110,10 @@ export default function NewsFeed() {
           </button>
         </div>
       </div>
-      <a className={styles.seeMore}>
+      <a
+        className={styles.seeMore}
+        href="https://gisportal.syadtech.com/greenmakkah/news"
+      >
         استعرض جميع الأخبار
         <svg
           className={styles.icon}
